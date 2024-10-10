@@ -1,19 +1,37 @@
-run-dist: clean build test checkstyle report
-	build\\install\\app\\bin\\app
-
-checkstyle:
-	gradlew.bat checkstyleMain
+setup:
+	@gradle wrapper --gradle-version 7.4
 
 clean:
-	gradlew.bat clean
+	@./gradlew clean
 
 build:
-	gradlew.bat installDist
+	@./gradlew clean build
+
+start:
+	APP_ENV=development ./gradlew run
+
+installDist:
+	@./gradlew clean installDist
+
+run-dist:
+	@./build/install/app/bin/app
+
+run:
+	@./gradlew run
+
+generate-migrations:
+	@./gradlew generateMigrations
+
+lint:
+	@./gradlew checkstyleMain checkstyleTest
 
 test:
-	gradlew.bat test
+	@./gradlew test
 
 report:
-	gradlew.bat jacocoTestReport
+	@./gradlew jacocoTestReport
+
+check-updates:
+	@./gradlew dependencyUpdates
 
 .PHONY: build
