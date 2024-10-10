@@ -1,5 +1,7 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/leshayurovskikh/java-project-78/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/leshayurovskikh/java-project-78/actions)
+<a href="https://<a href="https://codeclimate.com/github/leshayurovskikh/java-project-78/maintainability"><img src="https://api.codeclimate.com/v1/badges/2e84ef1a20e88dc7e25b/maintainability" /></a>codeclimate.com/github/leshayurovskikh/java-project-78/test_coverage"><img src="https://api.codeclimate.com/v1/badges/2e84ef1a20e88dc7e25b/test_coverage" /></a>
+
 # **Валидатор данных**
 
 Валидатор данных – библиотека, с помощью которой можно проверять корректность любых данных. 
