@@ -8,30 +8,32 @@ build:
 	@./gradlew clean build
 
 start:
-	APP_ENV=development ./gradlew run
+# Makefile
 
-installDist:
-	@./gradlew clean installDist
+.DEFAULT_GOAL := build-run
+
+install:
+	./gradlew install
 
 run-dist:
-	@./build/install/app/bin/app
+	# Очистка от результатов предыдущей сборки
+	./gradlew clean
+
+build:
+	./gradlew build
 
 run:
-	@./gradlew run
-
-generate-migrations:
-	@./gradlew generateMigrations
-
-lint:
-	@./gradlew checkstyleMain checkstyleTest
+	./gradlew run
 
 test:
-	@./gradlew test
+	./gradlew test
 
 report:
-	@./gradlew jacocoTestReport
+	./gradlew jacocoTestReport
 
-check-updates:
-	@./gradlew dependencyUpdates
+lint:
+	./gradlew checkstyleMain
+
+build-run: build run
 
 .PHONY: build
