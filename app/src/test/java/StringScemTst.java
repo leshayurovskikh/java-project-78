@@ -6,7 +6,7 @@ import hexlet.code.schemas.StringSchema;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class StringScemTst {
+public final class StringScemTst {
     private StringSchema stringSchema;
 
     @BeforeEach
