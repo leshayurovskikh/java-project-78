@@ -1,7 +1,8 @@
 package schemas;
 
 import java.util.Map;
-public class MapSchema extends BaseSchema<Map<String, Object>> {
+
+public final class MapSchema extends BaseSchema<Map<String, String>> {
     public MapSchema required() {
         addValidator("required", value -> value != null);
         return this;
